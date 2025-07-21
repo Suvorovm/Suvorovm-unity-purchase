@@ -1,6 +1,6 @@
 {
   "name": "com.suvorov.unity-purchase",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "displayName": "Purchasing wrapper",
   "description": "Library wrapper for purchasing in Unity.",
   "unity": "2022.3",
