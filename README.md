@@ -1,0 +1,2 @@
+# Library
+The library is a wrapper for shopping. A file .asmdef is automatically generated. Generate a license key before launching
