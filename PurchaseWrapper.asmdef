@@ -1,0 +1,27 @@
+{
+    "name": "PurchaseWrapper",
+    "rootNamespace": "",
+    "references": [
+        "CGK",
+        "Unity.Services.Core",
+        "UniTask",
+        "UnityEditor.Purchasing",
+        "UnityEngine.Purchasing",
+        "Purchasing.Common",
+        "Unity.Services.Core.Environments",
+        "UnityEngine.Purchasing.Security",
+        "UnityEngine.Purchasing.Stores",
+        "UnityEngine.Purchasing.SecurityCore",
+        "UnityEngine.Purchasing.SecurityStub",
+        "generated"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

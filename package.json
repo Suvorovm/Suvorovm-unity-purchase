@@ -1,0 +1,22 @@
+{
+  "name": "com.suvorov.unity-purchase",
+  "version": "0.0.1",
+  "displayName": "Purchasing wrapper",
+  "description": "Library wrapper for purchasing in Unity.",
+  "unity": "2022.3",
+  "unityRelease": "62f1",
+
+  "dependencies": {
+    "com.suvorov.common": "https://github.com/Suvorovm/CGK.git#0.0.39",
+    "com.cysharp.unitask": "https://github.com/Cysharp/UniTask.git?path=src/UniTask/Assets/Plugins/UniTask#2.3.2",
+    "com.unity.purchasing": "4.13.0"
+ },
+ "keywords": [
+    "purchasing"   
+  ],
+  "author": {
+    "name": "suvorov",
+    "email": "",
+    "url": "https://www.unity3d.com"
+  }
+}
