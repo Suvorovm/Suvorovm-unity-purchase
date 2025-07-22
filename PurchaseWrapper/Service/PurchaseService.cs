@@ -178,11 +178,12 @@ namespace PurchaseWrapper.Service
             _inited = false;
         }
 
+
         public PurchaseProcessingResult ProcessPurchase(PurchaseEventArgs purchaseEvent)
         {
             bool validPurchase = true;
 
-#if UNITY_ANDROID || UNITY_IOS || UNITY_STANDALONE_OSX
+#if (UNITY_ANDROID || UNITY_IOS || UNITY_STANDALONE_OSX) && !UNITY_EDITOR
             var validator = new CrossPlatformValidator(GooglePlayTangle.Data(), AppleTangle.Data(), Application.identifier);
 
             try
@@ -197,7 +198,7 @@ namespace PurchaseWrapper.Service
             }
 #endif
 
-            if (validPurchase)
+            if (validPurchase || _purchaseProduct.Fake)
             {
                 _purchaseDataHolder.SavePurchase(purchaseEvent.purchasedProduct.definition.id);
 
@@ -217,6 +218,7 @@ namespace PurchaseWrapper.Service
             }
             else
             {
+                _purchaseCompletionSource?.TrySetException(new PurchaseProcessionError(purchaseEvent.purchasedProduct.definition.id, PurchaseFailureReason.SignatureInvalid));
                 Debug.LogError("Purchase validation failed. Skipping reward logic.");
             }
 
